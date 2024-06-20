@@ -74,10 +74,9 @@
           </li>
         </ul>
       </section>
-      <section><p>Website design and development by Tony Elison.</p></section>
+      <div>Website design and development by Tony Elison.</div>
     </div>
     <div class="img-container">
-      <img src="/public/funk-studios.jpeg" alt="in-the-studio" />
       <div class="description">Photo by Lone Peak Sound, 2021.</div>
     </div>
   </div>
