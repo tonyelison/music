@@ -3,9 +3,7 @@ import "~/assets/stylesheets/main.css";
 </script>
 
 <template>
-  <div class="">
-    <AppHeader></AppHeader>
-    <main><NuxtPage></NuxtPage></main>
-    <AppFooter></AppFooter>
-  </div>
+  <AppHeader></AppHeader>
+  <AppMain></AppMain>
+  <AppFooter></AppFooter>
 </template>
