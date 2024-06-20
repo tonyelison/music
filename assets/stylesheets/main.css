@@ -5,9 +5,27 @@
 }
 
 body {
+  height: 100vh;
+
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-weight: 300;
+  font-size: 15px;
   letter-spacing: 0.03rem;
+}
+
+body > div#__nuxt,
+body > div#__nuxt > div {
+  height: 100%;
+}
+
+body > div#__nuxt > div {
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
   padding: 15px;
 }
 
@@ -31,4 +49,22 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  height: 40px;
+  background-color: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

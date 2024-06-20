@@ -5,7 +5,7 @@ import "~/assets/stylesheets/main.css";
 <template>
   <div class="">
     <AppHeader></AppHeader>
-    <NuxtPage></NuxtPage>
+    <main><NuxtPage></NuxtPage></main>
     <AppFooter></AppFooter>
   </div>
 </template>
