@@ -1,3 +1,11 @@
+<script>
+import "~/assets/stylesheets/main.css";
+</script>
+
 <template>
-  <NuxtPage></NuxtPage>
+  <div class="">
+    <AppHeader></AppHeader>
+    <NuxtPage></NuxtPage>
+    <AppFooter></AppFooter>
+  </div>
 </template>
