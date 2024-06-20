@@ -1,10 +1,10 @@
 <template>
   <header class="">
     <NuxtLink to="/">tony elison</NuxtLink>
-    <div class="">
+    <nav class="">
       <NuxtLink to="/">about</NuxtLink>
       <NuxtLink to="listen">listen</NuxtLink>
       <NuxtLink to="contact">contact</NuxtLink>
-    </div>
+    </nav>
   </header>
 </template>
