@@ -58,7 +58,7 @@ nav a::before {
 nav a:not(.router-link-exact-active)::before {
   transform: scaleX(0);
   transform-origin: top left;
-  transition: transform 0.3s ease;
+  transition: transform 0.22s ease;
 }
 
 nav a:not(.router-link-exact-active):hover::before {
