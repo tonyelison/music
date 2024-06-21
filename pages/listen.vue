@@ -1,5 +1,5 @@
 <template>
-  <Container>
+  <PageContainer>
     <div class="content">
       <div>
         <iframe
@@ -40,7 +40,7 @@
         </section>
       </div>
     </div>
-  </Container>
+  </PageContainer>
 </template>
 
 <style scoped>
