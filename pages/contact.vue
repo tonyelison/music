@@ -3,9 +3,7 @@
   <section>
     <p>
       For all lesson information and business inquiries:
-      <a href="mailto:tonyelison37@gmail.com" class="email-link"
-        >tonyelison37@gmail.com</a
-      >.
+      <a href="mailto:tonyelison37@gmail.com">tonyelison37@gmail.com</a>.
     </p>
   </section>
 </template>

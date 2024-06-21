@@ -21,16 +21,19 @@ body > div#__nuxt {
   flex-direction: column;
 }
 
+a {
+  text-decoration: underline;
+  color: #269391;
+}
+
+a:hover {
+  color: #145857;
+}
+
 header,
 main,
 footer {
   padding: 15px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  position: relative;
 }
 
 h1 {
@@ -63,15 +66,6 @@ ul {
 
 strong {
   font-weight: 500;
-}
-
-.email-link {
-  text-decoration: underline;
-  color: #269391;
-}
-
-.email-link:hover {
-  color: #145857;
 }
 
 .img-container {

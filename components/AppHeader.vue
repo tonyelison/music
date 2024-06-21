@@ -20,12 +20,23 @@ header {
   gap: 30px;
 }
 
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 nav {
   width: 100%;
   margin-left: auto;
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
 }
 
 nav a:hover {
@@ -60,10 +71,5 @@ nav a.router-link-exact-active::before {
 
 nav a.router-link-exact-active {
   font-weight: bold;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 18px;
 }
 </style>

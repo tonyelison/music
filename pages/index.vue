@@ -33,19 +33,44 @@
         <h2>Selected Discography</h2>
         <ul>
           <li>
-            “The Great, Great Noise” - David Ian Baker (Westmoon Records, 2024)
+            <a
+              href="https://open.spotify.com/album/66s9JVbPiTlxESzAyrDM1a?si=Bh8PCXOsTL25wxZ8o7-MJQ&nd=1&dlsi=8f6a41e872c84d65"
+              target="_blank"
+              >“The Great, Great Noise”</a
+            >
+            - David Ian Baker (Westmoon Records, 2024)
           </li>
           <li>
-            [Upcoming Hot House West Swing Collective Album] (Westmoon Records,
-            2024)
+            <a
+              href="https://www.hothousewest.com/swing-collective"
+              target="_blank"
+              >[Upcoming Hot House West Swing Collective Album]</a
+            >
+            (Westmoon Records, 2024)
           </li>
           <li>
-            “Sometimes It Snows in April” - David Halliday (Lone Peak Sound,
-            2021)
+            <a
+              href="https://www.lonepeaksound.com/albumsandmerch/david-halliday-sometimes-it-snows-in-april-2021-vinylcd"
+              target="_blank"
+              >“Sometimes It Snows in April”</a
+            >
+            - David Halliday (Lone Peak Sound, 2021)
           </li>
           <li>
-            “The Michie Sessions” - Michie Jazz Quintet (University of Utah,
-            2020)
+            <a
+              href="https://www.youtube.com/playlist?list=PLKzRMZwfKrwBwefAAHT9vxS1PjbQXfExD"
+              target="_blank"
+              >“The Michie Sessions”</a
+            >
+            - Michie Jazz Quintet (University of Utah, 2020)
+          </li>
+          <li>
+            <a
+              href="https://anaischantal.bandcamp.com/album/birdie"
+              target="_blank"
+              >"Birdie"</a
+            >
+            - Anaïs Chantal (Independent, 2019)
           </li>
         </ul>
       </section>
