@@ -1,7 +1,7 @@
 <template>
   <h1>About</h1>
   <div class="about">
-    <div>
+    <div class="info">
       <section>
         <p>
           <strong class="weight-md">Tony Elison</strong> is a pianist and music
