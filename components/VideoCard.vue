@@ -17,5 +17,18 @@ defineProps({
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen="true"
   ></iframe>
-  <div class="description">{{ title }} | {{ event }}, {{ date }}</div>
+  <div class="description">
+    {{ title }} | <em>{{ event }}, {{ date }}</em>
+  </div>
 </template>
+
+<style scoped>
+.vid-card {
+  width: 100%;
+  min-height: 400px;
+}
+
+em {
+  white-space: nowrap;
+}
+</style>

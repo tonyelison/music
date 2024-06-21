@@ -5,7 +5,6 @@
       <iframe
         class="embedded-player"
         title="westminster bandcamp playlist"
-        style="border: 0; width: 100%; height: 472px"
         src="https://bandcamp.com/EmbeddedPlayer/album=876053757/size=large/bgcol=ffffff/linkcol=269391/artwork=small/transparent=true/"
         seamless
         ><a
@@ -41,3 +40,11 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.embedded-player {
+  border: 0;
+  width: 100%;
+  height: 472px;
+}
+</style>

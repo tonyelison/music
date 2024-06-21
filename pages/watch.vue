@@ -1,6 +1,6 @@
 <template>
   <h1>Watch</h1>
-  <ul class="vid-grid">
+  <ul class="content">
     <li v-for="vid in videos">
       <VideoCard
         :src="vid.src"
@@ -53,3 +53,14 @@ const videos = [
   },
 ];
 </script>
+
+<style scoped>
+ul.content {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  width: 100%;
+}
+</style>
