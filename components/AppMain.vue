@@ -7,6 +7,6 @@
 <style scoped>
 main {
   flex: 1 1;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 </style>
