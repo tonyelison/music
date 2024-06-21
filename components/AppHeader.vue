@@ -4,7 +4,7 @@
     <nav>
       <div><NuxtLink to="/" class="index">about</NuxtLink></div>
       <div><NuxtLink to="listen" class="listen">listen</NuxtLink></div>
-      <div><NuxtLink to="watch" class="listen">watch</NuxtLink></div>
+      <!-- <div><NuxtLink to="watch" class="listen">watch</NuxtLink></div> -->
       <div><NuxtLink to="contact" class="contact">contact</NuxtLink></div>
     </nav>
   </header>
@@ -28,9 +28,9 @@ header {
 nav {
   width: 100%;
   margin-left: auto;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 a {
