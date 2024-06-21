@@ -1,0 +1,1 @@
+import{u as r,o as s,e as c,a as l,t as u,f as i,r as p,F as m}from"./BpFxUghn.js";const _=e=>e.charAt(0).toUpperCase()+e.slice(1),f={__name:"PageContainer",setup(e){var t;const a=(t=r().name)==null?void 0:t.toString(),n=a?a==="index"?"About":_(a):"Heading";return(o,d)=>(s(),c(m,null,[l("h1",null,u(i(n)),1),p(o.$slots,"default")],64))}};export{f as _};
