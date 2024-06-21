@@ -3,8 +3,8 @@
     <div><NuxtLink class="logo" to="/">tony elison</NuxtLink></div>
     <nav>
       <div><NuxtLink to="/" class="index">about</NuxtLink></div>
+      <div><NuxtLink to="watch" class="listen">watch</NuxtLink></div>
       <div><NuxtLink to="listen" class="listen">listen</NuxtLink></div>
-      <!-- <div><NuxtLink to="watch" class="listen">watch</NuxtLink></div> -->
       <div><NuxtLink to="contact" class="contact">contact</NuxtLink></div>
     </nav>
   </header>

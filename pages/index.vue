@@ -50,20 +50,29 @@
           </li>
           <li>
             <a
+              href="https://westminstercollegemusic.bandcamp.com/album/jazz-faculty-concert"
+              target="_blank"
+            >
+              "Jazz Faculty Concert"
+            </a>
+            - Westminster College Jazz Faculty (Westminster College, 2022)
+          </li>
+          <li>
+            <a
               href="https://www.lonepeaksound.com/albumsandmerch/david-halliday-sometimes-it-snows-in-april-2021-vinylcd"
               target="_blank"
               >“Sometimes It Snows in April”</a
             >
             - David Halliday (Lone Peak Sound, 2021)
           </li>
-          <li>
+          <!-- <li>
             <a
               href="https://www.youtube.com/playlist?list=PLKzRMZwfKrwBwefAAHT9vxS1PjbQXfExD"
               target="_blank"
               >“The Michie Sessions”</a
             >
             - Michie Jazz Quintet (University of Utah, 2020)
-          </li>
+          </li> -->
           <li>
             <a
               href="https://anaischantal.bandcamp.com/album/birdie"
@@ -111,12 +120,6 @@
 </template>
 
 <style scoped>
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
 .info {
   max-width: 800px;
 }

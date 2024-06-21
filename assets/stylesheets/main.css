@@ -64,8 +64,14 @@ ul {
   padding-left: 25px;
 }
 
-strong {
+/* strong {
   font-weight: 500;
+} */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .img-container {
