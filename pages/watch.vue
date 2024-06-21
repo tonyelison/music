@@ -1,15 +1,16 @@
 <template>
-  <h1>Watch</h1>
-  <ul class="content">
-    <li v-for="vid in videos">
-      <VideoCard
-        :src="vid.src"
-        :title="vid.title"
-        :event="vid.event"
-        :date="vid.date"
-      ></VideoCard>
-    </li>
-  </ul>
+  <PageContainer>
+    <ul class="content">
+      <li v-for="vid in videos">
+        <VideoCard
+          :src="vid.src"
+          :title="vid.title"
+          :event="vid.event"
+          :date="vid.date"
+        ></VideoCard>
+      </li>
+    </ul>
+  </PageContainer>
 </template>
 
 <script setup>

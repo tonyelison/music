@@ -13,6 +13,8 @@ body {
   font-size: 15px;
   line-height: 1.25;
   /* letter-spacing: 0.03rem; */
+
+  --primary-color: #00c3bc;
 }
 
 body > div#__nuxt {
@@ -80,6 +82,7 @@ ul {
   background-size: cover;
   background-position: 100% 25%;
   position: relative;
+  z-index: -1;
 }
 
 .img-container .description {
@@ -104,4 +107,27 @@ footer {
   display: flex;
   justify-content: right;
   align-items: center;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0ebea;
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }

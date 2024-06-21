@@ -65,13 +65,13 @@
               - David Halliday (Lone Peak Sound, 2021)
             </li>
             <!-- <li>
-              <a
-                href="https://www.youtube.com/playlist?list=PLKzRMZwfKrwBwefAAHT9vxS1PjbQXfExD"
-                target="_blank"
-                >“The Michie Sessions”</a
-              >
-              - Michie Jazz Quintet (University of Utah, 2020)
-            </li> -->
+                <a
+                  href="https://www.youtube.com/playlist?list=PLKzRMZwfKrwBwefAAHT9vxS1PjbQXfExD"
+                  target="_blank"
+                  >“The Michie Sessions”</a
+                >
+                - Michie Jazz Quintet (University of Utah, 2020)
+              </li> -->
             <li>
               <a
                 href="https://anaischantal.bandcamp.com/album/birdie"

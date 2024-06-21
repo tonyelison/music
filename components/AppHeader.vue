@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="isScrolling ? 'scrolling' : ''">
     <div><NuxtLink class="logo" to="/">tony elison</NuxtLink></div>
     <nav>
       <div><NuxtLink to="/" class="index">about</NuxtLink></div>
@@ -10,19 +10,54 @@
   </header>
 </template>
 
+<script setup>
+let isScrolling = ref(false);
+const scrollThreshold = 100;
+
+const updateHeaderStyle = () => {
+  if (window.scrollY <= scrollThreshold && isScrolling.value) {
+    isScrolling.value = false;
+  } else if (window.scrollY > scrollThreshold && !isScrolling.value) {
+    isScrolling.value = true;
+  }
+};
+
+onMounted(() => {
+  updateHeaderStyle();
+  window.addEventListener("scroll", updateHeaderStyle);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", updateHeaderStyle);
+});
+</script>
+
 <style scoped>
 header {
+  position: fixed;
+  width: 100%;
   height: 50px;
-  background-color: #e2fffe;
+  /* background-color: #a1fffc; */
+  background-color: #c9fffd;
+  transition: background 0.5s ease-in-out 0s;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
+.scrolling {
+  background-color: white;
+}
+
 .logo {
   font-weight: bold;
   font-size: 18px;
+  /* color: #00827e; */
+}
+
+.logo:hover {
+  color: var(--primary-color);
 }
 
 nav {
