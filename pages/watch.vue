@@ -1,3 +1,17 @@
+<template>
+  <h1>Watch</h1>
+  <ul class="vid-grid">
+    <li v-for="vid in videos">
+      <VideoCard
+        :src="vid.src"
+        :title="vid.title"
+        :event="vid.event"
+        :date="vid.date"
+      ></VideoCard>
+    </li>
+  </ul>
+</template>
+
 <script setup>
 const videos = [
   {
@@ -39,12 +53,3 @@ const videos = [
   },
 ];
 </script>
-
-<template>
-  <h1>Watch</h1>
-  <ul class="vid-grid">
-    <li v-for="video in videos">
-      <VideoCard :video="video"></VideoCard>
-    </li>
-  </ul>
-</template>
