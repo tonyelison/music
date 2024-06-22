@@ -54,6 +54,7 @@ header {
 .logo {
   font-weight: bold;
   font-size: 18px;
+  text-wrap: nowrap;
   /* color: #00827e; */
 }
 
