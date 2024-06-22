@@ -4,11 +4,11 @@ export default defineNuxtConfig({
   spaLoadingTemplate: false,
   app: {
     // use these for github pages deploy
-    // baseURL: "/music/",
-    // buildAssetsDir: "music/assets",
+    baseURL: "/music/",
+    buildAssetsDir: "/assets",
 
     // use this for netifly deploy
-    buildAssetsDir: "~/assets",
+    // buildAssetsDir: "~/assets",
   },
   modules: [
     [
