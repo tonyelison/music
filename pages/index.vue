@@ -126,11 +126,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-  }
-
   .info {
     grid-row: 2;
   }

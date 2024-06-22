@@ -131,3 +131,10 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
 }
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
