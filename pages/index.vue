@@ -124,4 +124,20 @@
 .info {
   max-width: 800px;
 }
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .info {
+    grid-row: 2;
+  }
+
+  .img-container {
+    grid-row: 1;
+    min-height: 40vh;
+  }
+}
 </style>
