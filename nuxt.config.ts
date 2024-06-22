@@ -3,8 +3,12 @@ export default defineNuxtConfig({
   // devtools: { enabled: true },
   spaLoadingTemplate: false,
   app: {
-    baseURL: "/",
-    buildAssetsDir: "~/assets", // don't use "_" at the begining of the folder name to avoids nojkill conflict
+    // use these for github pages deploy
+    // baseURL: "/music/",
+    // buildAssetsDir: "music/assets",
+
+    // use this for netifly deploy
+    buildAssetsDir: "~/assets",
   },
   modules: [
     [
