@@ -1,34 +1,45 @@
 <template>
   <header :class="isScrolling ? 'scrolling' : ''">
     <div><NuxtLink class="logo" to="/">tony elison</NuxtLink></div>
-    <nav>
+    <nav v-if="isDesktopView">
       <div><NuxtLink to="/" class="index">about</NuxtLink></div>
       <div><NuxtLink to="watch" class="listen">watch</NuxtLink></div>
       <div><NuxtLink to="listen" class="listen">listen</NuxtLink></div>
       <div><NuxtLink to="contact" class="contact">contact</NuxtLink></div>
     </nav>
+    <HamburgerMenu v-else></HamburgerMenu>
   </header>
 </template>
 
 <script setup>
-let isScrolling = ref(false);
-const scrollThreshold = 100;
+import { useWindowScroll } from "@vueuse/core";
 
-const updateHeaderStyle = () => {
-  if (window.scrollY <= scrollThreshold && isScrolling.value) {
-    isScrolling.value = false;
-  } else if (window.scrollY > scrollThreshold && !isScrolling.value) {
-    isScrolling.value = true;
-  }
+const scrollY = ref(useWindowScroll().y);
+
+const scrollThreshold = 100;
+const resizeThreshold = 768;
+
+const isScrolling = ref(true);
+const isDesktopView = ref(true);
+
+const setIsScrolling = () => {
+  isScrolling.value = scrollY.value > scrollThreshold;
+};
+
+const checkResize = () => {
+  isDesktopView.value = window.innerWidth > resizeThreshold;
 };
 
 onMounted(() => {
-  updateHeaderStyle();
-  window.addEventListener("scroll", updateHeaderStyle);
+  setIsScrolling();
+  checkResize();
+  window.addEventListener("scroll", setIsScrolling);
+  window.addEventListener("resize", checkResize);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", updateHeaderStyle);
+  window.removeEventListener("scroll", setIsScrolling);
+  window.addEventListener("resize", checkResize);
 });
 </script>
 
@@ -74,6 +85,7 @@ a {
   text-decoration: none;
   color: black;
   position: relative;
+  font-weight: 500;
 }
 
 nav a:hover {
@@ -86,7 +98,7 @@ nav a::before {
   position: absolute;
   display: block;
   width: 100%;
-  height: 1.2px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background-color: black;

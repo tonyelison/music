@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // devtools: { enabled: true },
+  devtools: { enabled: false },
   spaLoadingTemplate: false,
   app: {
     // use these for github pages deploy
@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       {
         families: {
           Inter: [300, 500, 700],
+          "Roboto Mono": [300, 500, 700],
         },
       },
     ],
