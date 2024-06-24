@@ -20,12 +20,10 @@
       ></rect>
     </svg>
   </button>
-  <div class="dropdown" :style="menuIsActive ? 'display: none;' : ''"></div>
 </template>
 
 <script setup>
 const menuIsActive = ref(false);
-
 const toggleMenu = () => {
   menuIsActive.value = !menuIsActive.value;
 };

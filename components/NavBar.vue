@@ -1,12 +1,14 @@
 <template>
-  <nav v-if="isDesktopView">
-    <ul>
-      <li v-for="link in links">
-        <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
-      </li>
-    </ul>
-  </nav>
-  <HamburgerMenu v-else></HamburgerMenu>
+  <div class="nav-container">
+    <nav v-if="isDesktopView">
+      <ul>
+        <li v-for="link in links">
+          <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+    <HamburgerMenu v-else></HamburgerMenu>
+  </div>
 </template>
 
 <script setup>
@@ -35,6 +37,10 @@ const links = [
 </script>
 
 <style scoped>
+.nav-container {
+  text-align: right;
+}
+
 nav {
   width: 100%;
   margin-left: auto;
