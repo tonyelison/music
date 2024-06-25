@@ -28,6 +28,9 @@ const isDesktopView = ref(true);
 
 const checkResize = () => {
   isDesktopView.value = window.innerWidth > resizeThreshold;
+  if (navFlyout.isOpen && isDesktopView) {
+    navFlyout.toggle(false);
+  }
 };
 
 onMounted(() => {
