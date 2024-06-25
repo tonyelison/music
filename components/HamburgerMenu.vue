@@ -57,7 +57,7 @@ button.active .line {
 }
 
 button.active :is(.top, .bottom) {
-  y: 45;
+  y: 45px;
 }
 
 button.active .top {
