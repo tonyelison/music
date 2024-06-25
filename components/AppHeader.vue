@@ -81,7 +81,7 @@ header {
 }
 
 .logo {
-  width: min-content;
+  width: max-content;
   font-weight: bold;
   font-size: 18px;
   text-wrap: nowrap;
