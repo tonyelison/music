@@ -1,0 +1,1 @@
+import{u as s,o as r,e as c,a as l,t as u,g as i,h as p,F as m}from"./p3YotVyf.js";const _=e=>e.charAt(0).toUpperCase()+e.slice(1),h={__name:"PageContainer",setup(e){var t;const a=(t=s().name)==null?void 0:t.toString(),n=a?a==="index"?"About":_(a):"Heading";return(o,g)=>(r(),c(m,null,[l("h1",null,u(i(n)),1),p(o.$slots,"default")],64))}};export{h as _};
