@@ -1,5 +1,8 @@
 <template>
-  <button @click="toggleMenu" :class="menuIsActive ? 'active' : ''">
+  <button
+    @click="() => navFlyout.toggle()"
+    :class="navFlyout.isOpen ? 'active' : ''"
+  >
     <svg class="hamburger" viewBox="0 0 100 100" width="25">
       <rect class="line top" width="80" height="8" x="10" y="25" rx="4"></rect>
       <rect
@@ -23,10 +26,7 @@
 </template>
 
 <script setup>
-const menuIsActive = ref(false);
-const toggleMenu = () => {
-  menuIsActive.value = !menuIsActive.value;
-};
+import { navFlyout } from "~/stores/navFlyout.ts";
 </script>
 
 <style>

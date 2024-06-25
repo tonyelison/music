@@ -1,18 +1,20 @@
 <template>
   <header :class="isScrolling ? 'scrolling' : ''">
-    <NuxtLink class="logo" @click.native="toggleFlyout(false)" to="/"
-      >tony elison</NuxtLink
-    >
+    <NuxtLink class="logo" @click.native="navFlyout.toggle(false)" to="/"
+      >tony elison
+      <div>{{ navFlyout.isOpen }}</div>
+    </NuxtLink>
     <NavBar v-if="isDesktopView" :links="links"></NavBar>
-    <HamburgerMenu @click="() => toggleFlyout()" v-else></HamburgerMenu>
+    <HamburgerMenu v-else></HamburgerMenu>
   </header>
-  <div class="dropdown" :class="flyoutIsOpen ? '' : 'closed'">
-    <NavBar :links="links" :linkAction="() => toggleFlyout()"></NavBar>
+  <div class="dropdown" :class="navFlyout.isOpen ? '' : 'closed'">
+    <NavBar :links="links" :linkAction="() => navFlyout.toggle()"></NavBar>
   </div>
 </template>
 
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
+import { navFlyout } from "/stores/navFlyout.ts";
 
 const scrollY = ref(useWindowScroll().y);
 const scrollThreshold = 100;
@@ -47,11 +49,6 @@ const links = [
   { label: "listen", to: "/listen" },
   { label: "contact", to: "/contact" },
 ];
-
-const flyoutIsOpen = ref(false);
-const toggleFlyout = (state) => {
-  flyoutIsOpen.value = state === undefined ? !flyoutIsOpen.value : state;
-};
 </script>
 
 <style scoped>
