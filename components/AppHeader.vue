@@ -4,7 +4,7 @@
       >tony elison</NuxtLink
     >
     <NavBar v-if="isDesktopView" :links="links"></NavBar>
-    <HamburgerMenu @click.native="() => toggleFlyout()" v-else></HamburgerMenu>
+    <HamburgerMenu @click="() => toggleFlyout()" v-else></HamburgerMenu>
   </header>
   <div class="dropdown" :class="flyoutIsOpen ? '' : 'closed'">
     <NavBar :links="links" :linkAction="() => toggleFlyout()"></NavBar>
