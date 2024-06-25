@@ -1,46 +1,20 @@
-<template>
-  <div class="nav-container">
-    <nav v-if="isDesktopView">
-      <ul>
-        <li v-for="link in links">
-          <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-    <HamburgerMenu v-else></HamburgerMenu>
-  </div>
-</template>
-
 <script setup>
-const resizeThreshold = 768;
-const isDesktopView = ref(true);
-
-const checkResize = () => {
-  isDesktopView.value = window.innerWidth > resizeThreshold;
-};
-
-onMounted(() => {
-  checkResize();
-  window.addEventListener("resize", checkResize);
+defineProps({
+  links: Array,
 });
-
-onUnmounted(() => {
-  window.addEventListener("resize", checkResize);
-});
-
-const links = [
-  { label: "about", to: "/" },
-  { label: "watch", to: "/watch" },
-  { label: "listen", to: "/listen" },
-  { label: "contact", to: "/contact" },
-];
 </script>
 
-<style scoped>
-.nav-container {
-  text-align: right;
-}
+<template>
+  <nav>
+    <ul>
+      <li v-for="link in links">
+        <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
+      </li>
+    </ul>
+  </nav>
+</template>
 
+<style scoped>
 nav {
   width: 100%;
   margin-left: auto;
@@ -51,7 +25,13 @@ ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+/* flyout menu nav */
+.dropdown ul {
+  flex-direction: column;
 }
 
 a {

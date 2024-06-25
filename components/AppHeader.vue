@@ -1,16 +1,18 @@
 <template>
   <header :class="isScrolling ? 'scrolling' : ''">
     <NuxtLink class="logo" to="/">tony elison</NuxtLink>
-    <NavBar></NavBar>
+    <NavBar v-if="isDesktopView" :links="links"></NavBar>
+    <HamburgerMenu v-else></HamburgerMenu>
   </header>
-  <!-- <div class="dropdown"></div> -->
+  <div class="dropdown" :class="flyoutIsOpen ? '' : 'closed'">
+    <NavBar :links="links"></NavBar>
+  </div>
 </template>
 
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
 
 const scrollY = ref(useWindowScroll().y);
-
 const scrollThreshold = 100;
 const isScrolling = ref(true);
 
@@ -18,19 +20,33 @@ const setIsScrolling = () => {
   isScrolling.value = scrollY.value > scrollThreshold;
 };
 
+const resizeThreshold = 768;
+const isDesktopView = ref(true);
+
+const checkResize = () => {
+  isDesktopView.value = window.innerWidth > resizeThreshold;
+};
+
 onMounted(() => {
   setIsScrolling();
+  checkResize();
   window.addEventListener("scroll", setIsScrolling);
+  window.addEventListener("resize", checkResize);
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", setIsScrolling);
+  window.addEventListener("resize", checkResize);
 });
 
-const menuIsActive = ref(false);
-const toggleMenu = () => {
-  menuIsActive.value = !menuIsActive.value;
-};
+const links = [
+  { label: "about", to: "/" },
+  { label: "watch", to: "/watch" },
+  { label: "listen", to: "/listen" },
+  { label: "contact", to: "/contact" },
+];
+
+const flyoutIsOpen = ref(false);
 </script>
 
 <style scoped>
@@ -71,11 +87,20 @@ header {
 }
 
 .dropdown {
+  padding: var(--screen-padding);
   height: calc(100vh - var(--header-height));
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: var(--header-height);
   background-color: var(--header-bg-color);
   z-index: 1;
+
+  transition: 0.5s ease-in-out;
+}
+
+.dropdown.closed {
+  height: 0;
+  padding-block: 0;
+  opacity: 0;
 }
 </style>

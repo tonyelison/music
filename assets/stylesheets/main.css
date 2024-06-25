@@ -15,6 +15,7 @@ body {
   /* letter-spacing: 0.03rem; */
 
   --primary-color: #00c3bc;
+  --screen-padding: 15px;
 }
 
 body > div#__nuxt {
@@ -35,7 +36,7 @@ a:hover {
 header,
 main,
 footer {
-  padding: 15px;
+  padding: var(--screen-padding);
 }
 
 h1 {
