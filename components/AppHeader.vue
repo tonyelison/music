@@ -1,5 +1,5 @@
 <template>
-  <header :class="isScrolling ? 'scrolling' : ''">
+  <header :class="isScrolling && !navFlyout.isOpen ? 'scrolling' : ''">
     <NuxtLink class="logo" @click.native="navFlyout.toggle(false)" to="/"
       >tony elison
     </NuxtLink>
@@ -34,6 +34,7 @@ const checkResize = () => {
 };
 
 onMounted(() => {
+  document.querySelector("header").style.top = 0;
   setIsScrolling();
   checkResize();
   window.addEventListener("scroll", setIsScrolling);
@@ -62,12 +63,13 @@ const links = [
 header {
   z-index: 1;
   position: fixed;
+  top: calc(var(--header-height) * -1);
   width: 100%;
   height: var(--header-height);
 
   /* background-color: #a1fffc; */
   background-color: var(--header-bg-color);
-  transition: background 0.5s ease-in-out 0s;
+  transition: background 0.5s ease-in-out 0s, top 0.5s ease-in-out;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -79,18 +81,11 @@ header {
 }
 
 .logo {
+  width: min-content;
   font-weight: bold;
   font-size: 18px;
   text-wrap: nowrap;
   text-decoration: none;
-  color: black;
-}
-
-.logo:hover {
-  color: var(--primary-color);
-}
-
-.logo:visited {
   color: black;
 }
 
