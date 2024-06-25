@@ -1,27 +1,19 @@
 <template>
-  <header :class="isScrolling && !navFlyout.isOpen ? 'scrolling' : ''">
+  <header :class="scrollingClasses">
     <NuxtLink class="logo" @click.native="navFlyout.toggle(false)" to="/"
       >tony elison
     </NuxtLink>
     <NavBar v-if="isDesktopView" :links="links"></NavBar>
     <HamburgerMenu v-else></HamburgerMenu>
   </header>
-  <div class="dropdown" :class="navFlyout.isOpen ? '' : 'closed'">
+  <div class="dropdown" :class="navContainerClasses">
     <NavBar :links="links" :linkAction="() => navFlyout.toggle(false)"></NavBar>
   </div>
 </template>
 
 <script setup>
-import { useWindowScroll } from "@vueuse/core";
 import { navFlyout } from "/stores/navFlyout.ts";
-
-const scrollY = ref(useWindowScroll().y);
-const scrollThreshold = 100;
-const isScrolling = ref(true);
-
-const setIsScrolling = () => {
-  isScrolling.value = scrollY.value > scrollThreshold;
-};
+import { scroll } from "/stores/scroll.ts";
 
 const resizeThreshold = 768;
 const isDesktopView = ref(true);
@@ -35,15 +27,14 @@ const checkResize = () => {
 
 onMounted(() => {
   document.querySelector("header").style.top = 0;
-  setIsScrolling();
+  scroll.addEventListener();
   checkResize();
-  window.addEventListener("scroll", setIsScrolling);
   window.addEventListener("resize", checkResize);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", setIsScrolling);
-  window.addEventListener("resize", checkResize);
+  scroll.removeEventListener();
+  window.removeEventListener("resize", checkResize);
 });
 
 const links = [
@@ -52,6 +43,14 @@ const links = [
   { label: "listen", to: "/listen" },
   { label: "contact", to: "/contact" },
 ];
+
+const scrollingClasses = computed(() => {
+  return scroll.didScroll && !navFlyout.isOpen ? "scrolling" : "";
+});
+
+const navContainerClasses = computed(() => {
+  return (navFlyout.isOpen ? "" : "closed") + " " + scrollingClasses.value;
+});
 </script>
 
 <style scoped>
@@ -76,8 +75,9 @@ header {
   column-gap: 30px;
 }
 
-.scrolling {
-  background-color: white;
+.scrolling,
+.scrolling .dropdown {
+  background-color: white !important;
 }
 
 .logo {
@@ -98,7 +98,7 @@ header {
   background-color: var(--header-bg-color);
   z-index: 1;
   overflow: hidden;
-  transition: height 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out 0s, height 0.5s ease-in-out;
   padding-block: 0;
 }
 
