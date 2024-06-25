@@ -73,6 +73,8 @@ nav a.router-link-exact-active {
 
 /* flyout menu nav */
 .dropdown nav {
+  padding-top: 15px;
+  font-size: 20px;
   transition: visibility 0s;
 }
 .dropdown.closed nav {
@@ -81,5 +83,8 @@ nav a.router-link-exact-active {
 }
 .dropdown ul {
   flex-direction: column;
+}
+.dropdown nav a::before {
+  height: 3px;
 }
 </style>

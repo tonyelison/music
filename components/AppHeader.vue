@@ -7,7 +7,7 @@
     <HamburgerMenu v-else></HamburgerMenu>
   </header>
   <div class="dropdown" :class="navFlyout.isOpen ? '' : 'closed'">
-    <NavBar :links="links" :linkAction="() => navFlyout.toggle()"></NavBar>
+    <NavBar :links="links" :linkAction="() => navFlyout.toggle(false)"></NavBar>
   </div>
 </template>
 
@@ -97,14 +97,12 @@ header {
   top: var(--header-height);
   background-color: var(--header-bg-color);
   z-index: 1;
-
-  transition: height 0.5s ease-in-out, padding-block 0.5s ease-in-out,
-    opacity 0.5s ease-in-out;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  padding-block: 0;
 }
 
 .dropdown.closed {
   height: 0;
-  padding-block: 0;
-  opacity: 0;
 }
 </style>
