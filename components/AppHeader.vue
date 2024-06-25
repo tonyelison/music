@@ -2,7 +2,6 @@
   <header :class="isScrolling ? 'scrolling' : ''">
     <NuxtLink class="logo" @click.native="navFlyout.toggle(false)" to="/"
       >tony elison
-      <div>{{ navFlyout.isOpen }}</div>
     </NuxtLink>
     <NavBar v-if="isDesktopView" :links="links"></NavBar>
     <HamburgerMenu v-else></HamburgerMenu>
@@ -86,6 +85,10 @@ header {
 
 .logo:hover {
   color: var(--primary-color);
+}
+
+.logo:visited {
+  color: black;
 }
 
 .dropdown {
