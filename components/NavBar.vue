@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
   links: Array,
+  linkAction: Function,
 });
 </script>
 
@@ -8,7 +9,9 @@ defineProps({
   <nav>
     <ul>
       <li v-for="link in links">
-        <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
+        <NuxtLink :to="link.to" @click.native="linkAction">{{
+          link.label
+        }}</NuxtLink>
       </li>
     </ul>
   </nav>

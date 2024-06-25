@@ -1,11 +1,13 @@
 <template>
   <header :class="isScrolling ? 'scrolling' : ''">
-    <NuxtLink class="logo" to="/">tony elison</NuxtLink>
+    <NuxtLink class="logo" @click.native="toggleFlyout(false)" to="/"
+      >tony elison</NuxtLink
+    >
     <NavBar v-if="isDesktopView" :links="links"></NavBar>
-    <HamburgerMenu v-else></HamburgerMenu>
+    <HamburgerMenu @click.native="() => toggleFlyout()" v-else></HamburgerMenu>
   </header>
   <div class="dropdown" :class="flyoutIsOpen ? '' : 'closed'">
-    <NavBar :links="links"></NavBar>
+    <NavBar :links="links" :linkAction="() => toggleFlyout()"></NavBar>
   </div>
 </template>
 
@@ -47,6 +49,9 @@ const links = [
 ];
 
 const flyoutIsOpen = ref(false);
+const toggleFlyout = (state) => {
+  flyoutIsOpen.value = state === undefined ? !flyoutIsOpen.value : state;
+};
 </script>
 
 <style scoped>
