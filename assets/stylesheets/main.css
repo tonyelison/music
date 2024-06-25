@@ -12,7 +12,6 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.25;
-  overflow: hidden;
   /* letter-spacing: 0.03rem; */
 
   --primary-color: #00c3bc;
@@ -68,10 +67,6 @@ ul {
   padding-left: 25px;
 }
 
-/* strong {
-  font-weight: 500;
-} */
-
 .content {
   margin-bottom: 10px;
   display: grid;
@@ -80,7 +75,6 @@ ul {
 }
 
 .img-container {
-  /* width: 100%; */
   background-image: url(/public/funk-studios.jpeg);
   background-size: cover;
   background-position: 100% 25%;

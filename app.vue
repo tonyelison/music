@@ -4,5 +4,6 @@ import "~/assets/stylesheets/main.css";
 
 <template>
   <AppHeader></AppHeader>
-  <AppBody></AppBody>
+  <AppMain></AppMain>
+  <AppFooter></AppFooter>
 </template>
