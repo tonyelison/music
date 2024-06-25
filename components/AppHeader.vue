@@ -100,7 +100,8 @@ header {
   background-color: var(--header-bg-color);
   z-index: 1;
 
-  transition: 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, padding-block 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
 }
 
 .dropdown.closed {

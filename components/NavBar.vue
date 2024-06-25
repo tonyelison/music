@@ -9,9 +9,7 @@ defineProps({
   <nav>
     <ul>
       <li v-for="link in links">
-        <NuxtLink :to="link.to" @click.native="linkAction">{{
-          link.label
-        }}</NuxtLink>
+        <NuxtLink :to="link.to" @click="linkAction">{{ link.label }}</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -30,11 +28,6 @@ ul {
   justify-content: space-between;
   column-gap: 10px;
   row-gap: 20px;
-}
-
-/* flyout menu nav */
-.dropdown ul {
-  flex-direction: column;
 }
 
 a {
@@ -76,5 +69,17 @@ nav a.router-link-exact-active::before {
 
 nav a.router-link-exact-active {
   font-weight: bold;
+}
+
+/* flyout menu nav */
+.dropdown nav {
+  transition: visibility 0s;
+}
+.dropdown.closed nav {
+  visibility: hidden;
+  transition-delay: 0.5s;
+}
+.dropdown ul {
+  flex-direction: column;
 }
 </style>
