@@ -1,0 +1,1 @@
+import{u as s,o as r,d as c,a as i,t as l,h as u,i as p,F as m}from"./CEHIzkOF.js";const _=e=>e.charAt(0).toUpperCase()+e.slice(1),h={__name:"PageContainer",setup(e){var t;const a=(t=s().name)==null?void 0:t.toString(),n=a?a==="index"?"About":_(a):"Heading";return(o,d)=>(r(),c(m,null,[i("h1",null,l(u(n)),1),p(o.$slots,"default")],64))}};export{h as _};
