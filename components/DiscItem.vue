@@ -27,8 +27,4 @@ div.disc-item {
 a {
   cursor: pointer;
 }
-a,
-div {
-  /* text-wrap: nowrap; */
-}
 </style>
