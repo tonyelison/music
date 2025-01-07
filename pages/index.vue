@@ -28,6 +28,7 @@
                 :title="item.title"
                 :label="item.label"
                 :date="item.date"
+                :link-src="item.linkSrc"
               ></DiscItem>
             </li>
           </ul>
@@ -83,7 +84,7 @@
 const discography = [
   {
     linkSrc:
-      "https://www.youtube.com/watch?v=wLAmKYvlRGM&list=OLAK5uy_neOOqwMOPMn9cyDrBI1QIvx9aRKzOpf9s",
+      "https://open.spotify.com/album/6CBbGoOm63y6lJAN86cs5K?si=nXfX24SWQwy2Wi9UMn_btA",
     title: "Lotus Blossom",
     artist: "Nathan Royal Trio",
     label: "Westmoon Records",
@@ -107,7 +108,7 @@ const discography = [
   },
   {
     linkSrc:
-      "https://www.lonepeaksound.com/albumsandmerch/david-halliday-sometimes-it-snows-in-april-2021-vinylcd",
+      "https://open.spotify.com/album/12OuGKWyIlWqFVHInfPp9D?si=IPd_VR1FQs2hQwVEipfJIg",
     artist: "David Halliday",
     title: "Sometimes It Snows in April",
     label: "Lone Peak Sound",
