@@ -88,7 +88,7 @@ const discography = [
     title: "Lotus Blossom",
     artist: "Nathan Royal Trio",
     label: "Westmoon Records",
-    date: "2025",
+    date: "2024",
   },
   {
     linkSrc:
