@@ -5,21 +5,34 @@
         <section>
           <p>
             <strong class="weight-md">Tony Elison</strong> is a pianist and
-            music educator based in Salt Lake City. He has been an active
-            participant in the Salt Lake City music scene for nearly ten years,
-            and is one of the most sought-after pianists and keyboardists in the
-            area. He can be found performing several times weekly at local
-            establishments in and around the city.
+            educator based in Salt Lake City. He has been an active participant
+            in the Salt Lake City music scene for nearly ten years, and is one
+            of the most sought-after pianists and keyboardists in the area. He
+            can be found performing several times weekly at local establishments
+            in and around the city.
           </p>
           <p>
             Tony maintains a private teaching practice, and is also faculty at
-            both Westminster University and Utah Valley University where he
-            teaches contemporary piano playing, improvisation, composition and
+            the University of Utah, Westminster University, and Utah Valley
+            University where he teaches piano, improvisation, composition and
             arranging, and ensemble skills.
           </p>
         </section>
         <hr />
-        <section>
+        <section class="vid-grid">
+          <h2>Selected Discography</h2>
+          <ul>
+            <li v-for="item in discography">
+              <DiscItem
+                :artist="item.artist"
+                :title="item.title"
+                :label="item.label"
+                :date="item.date"
+              ></DiscItem>
+            </li>
+          </ul>
+        </section>
+        <!-- <section>
           <h2>Notable Venues Performed</h2>
           <ul>
             <li>Dizzy's Club at Jazz at Lincoln Center</li>
@@ -27,61 +40,7 @@
             <li>Montreux Jazz Festival</li>
             <li>Carnegie Hall</li>
           </ul>
-        </section>
-        <section class="vid-grid">
-          <h2>Selected Discography</h2>
-          <ul>
-            <li>
-              <a
-                href="https://open.spotify.com/album/66s9JVbPiTlxESzAyrDM1a?si=Bh8PCXOsTL25wxZ8o7-MJQ&nd=1&dlsi=8f6a41e872c84d65"
-                target="_blank"
-                >“The Great, Great Noise”</a
-              >
-              - David Ian Baker (Westmoon Records, 2024)
-            </li>
-            <li>
-              <a
-                href="https://www.hothousewest.com/swing-collective"
-                target="_blank"
-                >[Upcoming Hot House West Swing Collective Album]</a
-              >
-              (Westmoon Records, 2024)
-            </li>
-            <li>
-              <a
-                href="https://westminstercollegemusic.bandcamp.com/album/jazz-faculty-concert"
-                target="_blank"
-              >
-                "Jazz Faculty Concert"
-              </a>
-              - Westminster College Jazz Faculty (Westminster College, 2022)
-            </li>
-            <li>
-              <a
-                href="https://www.lonepeaksound.com/albumsandmerch/david-halliday-sometimes-it-snows-in-april-2021-vinylcd"
-                target="_blank"
-                >“Sometimes It Snows in April”</a
-              >
-              - David Halliday (Lone Peak Sound, 2021)
-            </li>
-            <!-- <li>
-                <a
-                  href="https://www.youtube.com/playlist?list=PLKzRMZwfKrwBwefAAHT9vxS1PjbQXfExD"
-                  target="_blank"
-                  >“The Michie Sessions”</a
-                >
-                - Michie Jazz Quintet (University of Utah, 2020)
-              </li> -->
-            <li>
-              <a
-                href="https://anaischantal.bandcamp.com/album/birdie"
-                target="_blank"
-                >"Birdie"</a
-              >
-              - Anaïs Chantal (Independent, 2019)
-            </li>
-          </ul>
-        </section>
+        </section> -->
         <section>
           <h2>Education</h2>
           <ul>
@@ -119,6 +78,58 @@
     </div>
   </PageContainer>
 </template>
+
+<script setup>
+const discography = [
+  {
+    linkSrc:
+      "https://www.youtube.com/watch?v=wLAmKYvlRGM&list=OLAK5uy_neOOqwMOPMn9cyDrBI1QIvx9aRKzOpf9s",
+    title: "Lotus Blossom",
+    artist: "Nathan Royal Trio",
+    label: "Westmoon Records",
+    date: "2025",
+  },
+  {
+    linkSrc:
+      "https://open.spotify.com/album/66s9JVbPiTlxESzAyrDM1a?si=Bh8PCXOsTL25wxZ8o7-MJQ&nd=1&dlsi=8f6a41e872c84d65",
+    title: "The Great, Great Noise",
+    artist: "David Ian Baker",
+    label: "Westmoon Records",
+    date: "2024",
+  },
+  {
+    linkSrc:
+      "https://westminstercollegemusic.bandcamp.com/album/jazz-faculty-concert",
+    title: "Jazz Faculty Concert",
+    artist: "Westminster College Jazz Faculty",
+    label: "Westminster College",
+    date: "2022",
+  },
+  {
+    linkSrc:
+      "https://www.lonepeaksound.com/albumsandmerch/david-halliday-sometimes-it-snows-in-april-2021-vinylcd",
+    artist: "David Halliday",
+    title: "Sometimes It Snows in April",
+    label: "Lone Peak Sound",
+    date: "2021",
+  },
+  // {
+  //   linkSrc:
+  //     "https://www.youtube.com/playlist?list=PLKzRMZwfKrwBwefAAHT9vxS1PjbQXfExD",
+  //   artist: "Michie Jazz Quintet",
+  //   title: "The Michie Sessions",
+  //   label: "University of Utah",
+  //   date: "2020",
+  // },
+  {
+    linkSrc: "https://anaischantal.bandcamp.com/album/birdie",
+    artist: "Anaïs Chantal",
+    title: "Birdie",
+    label: "Independent",
+    date: "2019",
+  },
+];
+</script>
 
 <style scoped>
 .info {
