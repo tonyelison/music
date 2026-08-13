@@ -1,0 +1,4 @@
+const HamburgerMenu_vue_vue_type_style_index_0_lang = "button{all:unset;cursor:pointer;justify-self:right;width:-moz-min-content;width:min-content;--transition-speed:200ms}button:focus{outline:revert}.line{transform-origin:center;transition:y var(--transition-speed) ease-in-out var(--transition-speed),rotate var(--transition-speed) ease-in-out,opacity 0ms var(--transition-speed)}button.active .line{transition:y var(--transition-speed) ease-in-out,rotate var(--transition-speed) ease-in-out var(--transition-speed),opacity 0ms var(--transition-speed)}button.active :is(.top,.bottom){y:45px}button.active .top{rotate:45deg}button.active .middle{opacity:0}button.active .bottom{rotate:-45deg}";
+
+export { HamburgerMenu_vue_vue_type_style_index_0_lang as H };
+//# sourceMappingURL=entry-styles-3.mjs-BmsH2Ola.mjs.map
