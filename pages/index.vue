@@ -84,6 +84,14 @@
 const discography = [
   {
     linkSrc:
+      "https://open.spotify.com/album/7Faq7i3BrLe4GThO4G5F4i?si=4sVqIVNbRyCiKY1llu3cyQ",
+    title: "Strangely Beautiful People",
+    artist: "Christopher Kaukali",
+    label: "Westmoon Records",
+    date: "2026",
+  },
+  {
+    linkSrc:
       "https://open.spotify.com/album/6CBbGoOm63y6lJAN86cs5K?si=nXfX24SWQwy2Wi9UMn_btA",
     title: "Lotus Blossom",
     artist: "Nathan Royal Trio",
@@ -98,14 +106,14 @@ const discography = [
     label: "Westmoon Records",
     date: "2024",
   },
-  {
-    linkSrc:
-      "https://westminstercollegemusic.bandcamp.com/album/jazz-faculty-concert",
-    title: "Jazz Faculty Concert",
-    artist: "Westminster College Jazz Faculty",
-    label: "Westminster College",
-    date: "2022",
-  },
+  // {
+  //   linkSrc:
+  //     "https://westminstercollegemusic.bandcamp.com/album/jazz-faculty-concert",
+  //   title: "Jazz Faculty Concert",
+  //   artist: "Westminster College Jazz Faculty",
+  //   label: "Westminster College",
+  //   date: "2022",
+  // },
   {
     linkSrc:
       "https://open.spotify.com/album/12OuGKWyIlWqFVHInfPp9D?si=IPd_VR1FQs2hQwVEipfJIg",
