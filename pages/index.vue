@@ -40,6 +40,7 @@
               BMUS in Jazz Composition + Minor in Computer Science, University
               of Utah, 2020
             </li>
+            <li>MM in Jazz Studies, New England Conservatory, 2028</li>
           </ul>
         </section>
         <!-- <section>
