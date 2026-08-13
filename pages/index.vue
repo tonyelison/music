@@ -33,15 +33,6 @@
             </li>
           </ul>
         </section>
-        <!-- <section>
-          <h2>Notable Venues Performed</h2>
-          <ul>
-            <li>Dizzy's Club at Jazz at Lincoln Center</li>
-            <li>Telluride Jazz Festival</li>
-            <li>Montreux Jazz Festival</li>
-            <li>Carnegie Hall</li>
-          </ul>
-        </section> -->
         <section>
           <h2>Education</h2>
           <ul>
