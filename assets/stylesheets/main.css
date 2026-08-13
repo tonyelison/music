@@ -76,9 +76,9 @@ ul {
 }
 
 .img-container {
-  background-image: url(/public/funk-studios.jpeg);
+  background-image: url(/public/covey-center-2.JPG);
   background-size: cover;
-  background-position: 100% 25%;
+  background-position: 60%;
   position: relative;
 }
 

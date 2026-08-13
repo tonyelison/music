@@ -66,7 +66,7 @@
         <div>Website design and development by Tony Elison.</div>
       </div>
       <div class="img-container">
-        <div class="description">Photo by Lone Peak Sound, 2021.</div>
+        <!-- <div class="description">Photo by Lone Peak Sound, 2021.</div> -->
       </div>
     </div>
   </PageContainer>
