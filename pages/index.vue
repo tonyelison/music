@@ -51,7 +51,7 @@
             </li>
           </ul>
         </section>
-        <section>
+        <!-- <section>
           <h2>Awards / Honors</h2>
           <ul>
             <li>
@@ -69,7 +69,7 @@
               Place, 2017
             </li>
           </ul>
-        </section>
+        </section> -->
         <hr />
         <div>Website design and development by Tony Elison.</div>
       </div>
