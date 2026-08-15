@@ -5,7 +5,13 @@
 }
 
 body {
+  --background-color: black;
+  --primary-color: #00c3bc;
+  --screen-padding: 15px;
+
   height: 100vh;
+  background: var(--background-color);
+  color: white;
 
   /* font-family: Inter, Arial, Helvetica, sans-serif; */
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
@@ -13,9 +19,6 @@ body {
   font-size: 15px;
   line-height: 1.25;
   /* letter-spacing: 0.03rem; */
-
-  --primary-color: #00c3bc;
-  --screen-padding: 15px;
 }
 
 body > div#__nuxt {
@@ -85,7 +88,6 @@ ul {
 .img-container .description {
   transition: opacity 0.25s ease-in-out 0s;
   opacity: 0;
-  color: white;
   position: absolute;
   bottom: 10px;
   right: 8px;

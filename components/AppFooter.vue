@@ -9,8 +9,6 @@ const year = new Date().getFullYear();
 <style scoped>
 footer {
   height: 40px;
-  background-color: black;
-  color: white;
 
   display: flex;
   justify-content: right;

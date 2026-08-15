@@ -56,7 +56,7 @@ const navContainerClasses = computed(() => {
 <style scoped>
 * {
   --header-height: 50px;
-  --header-bg-color: #c9fffd;
+  --header-bg-color: var(--primary-color);
 }
 
 header {
@@ -67,7 +67,7 @@ header {
   height: var(--header-height);
 
   /* background-color: #a1fffc; */
-  background-color: var(--header-bg-color);
+  /* background-color: var(--header-bg-color); */
   transition:
     background 0.5s ease-in-out 0s,
     top 0.5s ease-in-out;
@@ -79,7 +79,7 @@ header {
 
 .scrolling,
 .scrolling .dropdown {
-  background-color: white !important;
+  background-color: transparent !important;
 }
 
 .logo {
@@ -88,7 +88,7 @@ header {
   font-size: 18px;
   text-wrap: nowrap;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .dropdown {
