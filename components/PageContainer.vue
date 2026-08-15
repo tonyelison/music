@@ -8,6 +8,6 @@ const heading = routeName
 </script>
 
 <template>
-  <h1>{{ heading }}</h1>
+  <!-- <h1>{{ heading }}</h1> -->
   <slot></slot>
 </template>
