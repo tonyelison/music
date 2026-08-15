@@ -1,5 +1,9 @@
+<script setup>
+const year = new Date().getFullYear();
+</script>
+
 <template>
-  <footer>© Tony Elison, 2024</footer>
+  <footer>© Tony Elison, {{ year }}</footer>
 </template>
 
 <style scoped>
