@@ -4,12 +4,12 @@
       <div class="info">
         <section>
           <p>
-            <strong class="weight-md">Anthony Elison</strong> is a
-            <strong>pianist</strong> and <strong>educator</strong> based in Salt
-            Lake City. He has been an active participant in the Salt Lake City
-            music scene for over ten years, and is one of the most sought-after
-            pianists and keyboardists in the area. He can be found performing
-            several times weekly at local establishments in and around the city.
+            <strong>Anthony Elison</strong> is a <strong>pianist</strong> and
+            <strong>educator</strong> based in Salt Lake City. He has been an
+            active participant in the Salt Lake City music scene for nearly ten
+            years, and is one of the most sought-after pianists and keyboardists
+            in the area. He can be found performing several times weekly at
+            local establishments in and around the city.
           </p>
           <p>
             Anthony maintains a private teaching practice, and is also faculty
