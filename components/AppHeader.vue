@@ -3,8 +3,8 @@
     <NuxtLink class="logo" @click.native="navFlyout.toggle(false)" to="/"
       >tony elison
     </NuxtLink>
-    <NavBar v-if="isDesktopView" :links="links"></NavBar>
-    <HamburgerMenu v-else></HamburgerMenu>
+    <!-- <NavBar v-if="isDesktopView" :links="links"></NavBar>
+    <HamburgerMenu v-else></HamburgerMenu> -->
   </header>
   <div class="dropdown" :class="navContainerClasses">
     <NavBar :links="links" :linkAction="() => navFlyout.toggle(false)"></NavBar>
@@ -68,7 +68,9 @@ header {
 
   /* background-color: #a1fffc; */
   background-color: var(--header-bg-color);
-  transition: background 0.5s ease-in-out 0s, top 0.5s ease-in-out;
+  transition:
+    background 0.5s ease-in-out 0s,
+    top 0.5s ease-in-out;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -98,7 +100,9 @@ header {
   background-color: var(--header-bg-color);
   z-index: 1;
   overflow: hidden;
-  transition: background 0.5s ease-in-out 0s, height 0.5s ease-in-out;
+  transition:
+    background 0.5s ease-in-out 0s,
+    height 0.5s ease-in-out;
   padding-block: 0;
 }
 
