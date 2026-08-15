@@ -1,0 +1,1 @@
+import{u as n,h as o}from"./C8qy0EKp.js";const s=e=>e.charAt(0).toUpperCase()+e.slice(1),i={__name:"PageContainer",setup(e){var a;const t=(a=n().name)==null?void 0:a.toString();return t&&(t==="index"||s(t)),(r,u)=>o(r.$slots,"default")}};export{i as _};
