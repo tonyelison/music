@@ -4,7 +4,7 @@
       <div class="info">
         <section>
           <p>
-            <strong class="weight-md">Tony Elison</strong> is a pianist and
+            <strong class="weight-md">Anthony Elison</strong> is a pianist and
             educator based in Salt Lake City. He has been an active participant
             in the Salt Lake City music scene for nearly ten years, and is one
             of the most sought-after pianists and keyboardists in the area. He
@@ -12,8 +12,8 @@
             in and around the city.
           </p>
           <p>
-            Tony maintains a private teaching practice, and is also faculty at
-            the University of Utah, Westminster University, and Utah Valley
+            Anthony maintains a private teaching practice, and is also faculty
+            at the University of Utah, Westminster University, and Utah Valley
             University where he teaches piano, improvisation, composition and
             arranging, and ensemble skills.
           </p>
@@ -63,7 +63,7 @@
           </ul>
         </section> -->
         <hr />
-        <div>Website design and development by Tony Elison.</div>
+        <div>Website design and development by Anthony Elison.</div>
       </div>
       <div class="img-container">
         <!-- <div class="description">Photo by Lone Peak Sound, 2021.</div> -->

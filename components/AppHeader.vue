@@ -1,7 +1,7 @@
 <template>
   <header :class="scrollingClasses">
     <NuxtLink class="logo" @click.native="navFlyout.toggle(false)" to="/"
-      >tony elison
+      >anthony elison
     </NuxtLink>
     <!-- <NavBar v-if="isDesktopView" :links="links"></NavBar>
     <HamburgerMenu v-else></HamburgerMenu> -->

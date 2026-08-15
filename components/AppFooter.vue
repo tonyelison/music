@@ -3,7 +3,7 @@ const year = new Date().getFullYear();
 </script>
 
 <template>
-  <footer>© Tony Elison, {{ year }}</footer>
+  <footer>© Anthony Elison, {{ year }}</footer>
 </template>
 
 <style scoped>
